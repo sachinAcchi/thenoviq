@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Content Library — Noviq</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/content-library.css" />
+</head>
+<body>
+
+<!-- Mobile sidebar overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="app-shell">
+
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar">
+
+      <div class="sidebar-logo">
+        <div class="logo">
+          <a href="/"><img src="../assets/images/logo.png" alt=""></a>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="dashboard.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </a>
+        <a class="nav-item" href="raw-news-inbox.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Raw News Inbox
+        </a>
+        <a class="nav-item" href="ai-processing.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          AI Processing
+        </a>
+        <a class="nav-item" href="content-editor.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Content Editor
+        </a>
+        <a class="nav-item" href="publish-queue.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Publish Queue
+        </a>
+        <a class="nav-item active" href="content-library.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Content Library
+        </a>
+        <a class="nav-item" href="analytics.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          Analytics
+        </a>
+        <a class="nav-item" href="team-management.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Team Management
+        </a>
+        <a class="nav-item" href="settings.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Settings
+        </a>
+      </nav>
+
+      <!-- <div class="sidebar-premium">
+        <div class="premium-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <div class="premium-title">You're on Premium Plan</div>
+        <div class="premium-desc">Unlimited access to all features and AI models.</div>
+        <button class="btn-upgrade">Upgrade Plan</button>
+      </div> -->
+
+      <div class="sidebar-user">
+        <div class="avatar-placeholder avatar-md" style="background:#F97316;font-size:13px;">SK</div>
+        <div class="user-info">
+          <div class="user-name">Sachin</div>
+          <div class="user-role">Admin</div>
+        </div>
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+
+    </aside>
+
+  <!-- ═══ MAIN AREA ═══ -->
+  <div class="main-area">
+
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header">
+      <button class="header-menu-btn" id="sidebarToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="header-search">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" class="search-input" placeholder="Search anything..." autocomplete="off" spellcheck="false" />
+        <!-- <span class="search-kbd">⌘K</span> -->
+      </div>
+
+      <div class="header-right">
+        <div class="header-notif">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          <span class="notif-badge">8</span>
+        </div>
+        <div class="header-user">
+          <div class="user-info">
+            <div class="user-name">Sachin</div>
+            <div class="user-role">Admin</div>
+          </div>
+          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+        <!-- ═══ PAGE CONTENT ═══ -->
+    <main class="page-content">
+
+      <!-- Page header -->
+      <div class="cl-page-header">
+        <div>
+          <h1 class="cl-page-title">Content Library</h1>
+          <p class="cl-page-subtitle">Browse, search and manage all published and archived content.</p>
+        </div>
+        <div class="cl-header-actions">
+          <button class="cl-export-btn" id="clExportBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export
+          </button>
+          <button class="cl-create-btn" id="clCreateBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Create New Content
+          </button>
+        </div>
+      </div>
+
+      <!-- Search bar -->
+      <div class="cl-search-bar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="cl-search-input" id="clSearchInput" placeholder="Search by title, keyword, or author…" />
+      </div>
+
+      <!-- Filter row -->
+      <div class="cl-filter-row">
+        <div class="cl-filter-select">
+          <span class="cl-filter-label">Subject</span>
+          <select class="cl-select" id="clSubjectFilter">
+            <option value="">All Subjects</option>
+            <option value="int-rel">International Relations</option>
+            <option value="economy">Economy</option>
+            <option value="science">Science &amp; Tech</option>
+            <option value="polity">Polity</option>
+            <option value="geo">Geography</option>
+            <option value="history">History</option>
+          </select>
+        </div>
+        <div class="cl-filter-select">
+          <span class="cl-filter-label">Exam Type</span>
+          <select class="cl-select" id="clExamFilter">
+            <option value="">All Exams</option>
+            <option value="UPSC">UPSC</option>
+            <option value="SSC">SSC</option>
+            <option value="IBPS">IBPS</option>
+            <option value="RRB">RRB</option>
+          </select>
+        </div>
+        <div class="cl-filter-select">
+          <span class="cl-filter-label">Content Type</span>
+          <select class="cl-select" id="clTypeFilter">
+            <option value="">All Types</option>
+            <option value="Article">Article</option>
+            <option value="MCQ Set">MCQ Set</option>
+            <option value="Notes">Notes</option>
+            <option value="Current Affairs">Current Affairs</option>
+          </select>
+        </div>
+        <div class="cl-filter-select">
+          <span class="cl-filter-label">Date Range</span>
+          <button class="cl-date-range-btn" id="clDateRangeBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            May 14, 2025 – May 21, 2025
+          </button>
+        </div>
+        <button class="cl-clear-btn" id="clClearFilters">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          Clear Filters
+        </button>
+      </div>
+
+      <!-- Table card -->
+      <div class="cl-table-card">
+
+        <!-- Tabs -->
+        <div class="cl-tabs" style="padding:0 var(--space-5);">
+          <button class="cl-tab active" data-tab="all"       id="tabAll">All Content (256)</button>
+          <button class="cl-tab"        data-tab="published" id="tabPublished">Published (198)</button>
+          <button class="cl-tab"        data-tab="draft"     id="tabDraft">Drafts (28)</button>
+          <button class="cl-tab"        data-tab="archived"  id="tabArchived">Archived (30)</button>
+        </div>
+
+        <!-- Table -->
+        <table class="cl-table">
+          <colgroup>
+            <col class="col-check"><col class="col-title"><col class="col-subject">
+            <col class="col-exam"><col class="col-type"><col class="col-author">
+            <col class="col-date"><col class="col-status"><col class="col-actions">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="col-check"><input type="checkbox" class="cl-checkbox" id="clCheckAll"></th>
+              <th class="col-title">Title</th>
+              <th class="col-subject">Subject</th>
+              <th class="col-exam">Exam Type</th>
+              <th class="col-type">Type</th>
+              <th class="col-author">Author</th>
+              <th class="col-date" id="clDateSort" style="cursor:pointer;">
+                <span class="cl-th-sort">
+                  Published Date
+                  <svg id="clDateSortIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+              </th>
+              <th class="col-status">Status</th>
+              <th class="col-actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="clTbody">
+            <!-- Rendered by content-library.js -->
+          </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="cl-pagination">
+          <span class="cl-pagination-info" id="clPaginationInfo">Showing 1 to 10 of 256 results</span>
+          <div class="cl-pagination-right">
+            <div class="cl-pg-pages" id="clPages"></div>
+            <div class="cl-per-page">
+              <select class="cl-per-page-select" id="clPerPageSelect">
+                <option value="10" selected>10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+              </select>
+              per page
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /cl-table-card -->
+
+    </main>
+
+    <!-- ════ CREATE NEW CONTENT MODAL ════ -->
+    <!-- ════ CREATE NEW CONTENT MODAL ════ -->
+    <div class="cl-modal-overlay" id="clCreateOverlay">
+      <div class="cl-modal" style="max-width:640px;">
+
+        <div class="cl-modal-header">
+          <div>
+            <span class="cl-modal-title">Create New Content</span>
+            <span class="cl-type-badge" id="clTypeBadge" style="display:none;margin-left:8px;"></span>
+          </div>
+          <button class="cl-modal-close" id="clCreateClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <form class="cl-modal-body" id="clCreateForm" onsubmit="return false;">
+
+          <!-- ── ALWAYS SHOWN: Basic Info ── -->
+          <div class="cl-modal-section-title">Basic Information</div>
+
+          <div class="cl-form-field">
+            <label class="cl-form-label">Title <span class="req">*</span></label>
+            <input type="text" class="cl-form-input" id="clTitleInput" maxlength="150" placeholder="Enter content title" />
+            <div class="cl-char-count" id="clTitleCount">0/150</div>
+          </div>
+
+          <div class="cl-form-row">
+            <div class="cl-form-field">
+              <label class="cl-form-label">Subject <span class="req">*</span></label>
+              <select class="cl-form-select" id="clSubjectSelect">
+                <option value="">Select subject</option>
+                <option value="int-rel">International Relations</option>
+                <option value="economy">Economy</option>
+                <option value="science">Science &amp; Tech</option>
+                <option value="polity">Polity</option>
+                <option value="geo">Geography</option>
+                <option value="history">History</option>
+              </select>
+            </div>
+            <div class="cl-form-field">
+              <label class="cl-form-label">Sub-Subject</label>
+              <select class="cl-form-select" id="clSubSubjectSelect">
+                <option value="">Select sub-subject</option>
+                <option>Bilateral Relations</option>
+                <option>Trade Agreements</option>
+                <option>Monetary Policy</option>
+                <option>Space Technology</option>
+                <option>Constitutional Law</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cl-form-field">
+            <label class="cl-form-label">Exam Type <span class="req">*</span></label>
+            <div class="cl-exam-checks">
+              <label class="cl-exam-check"><input type="checkbox" class="cl-exam-check-input" value="UPSC" /> UPSC</label>
+              <label class="cl-exam-check"><input type="checkbox" class="cl-exam-check-input" value="SSC"  /> SSC</label>
+              <label class="cl-exam-check"><input type="checkbox" class="cl-exam-check-input" value="IBPS" /> IBPS</label>
+              <label class="cl-exam-check"><input type="checkbox" class="cl-exam-check-input" value="RRB"  /> RRB</label>
+              <label class="cl-exam-check"><input type="checkbox" class="cl-exam-check-input" value="State PSC" /> State PSC</label>
+              <label class="cl-exam-check"><input type="checkbox" class="cl-exam-check-input" value="Others" /> Others</label>
+            </div>
+          </div>
+
+          <!-- Content Type radios -->
+          <div class="cl-form-field">
+            <label class="cl-form-label">Content Type <span class="req">*</span></label>
+            <div class="cl-type-radios" id="clTypeRadioGroup">
+              <label class="cl-type-radio"><input type="radio" class="cl-type-radio-input" name="clContentType" value="Article" checked /> Article</label>
+              <label class="cl-type-radio"><input type="radio" class="cl-type-radio-input" name="clContentType" value="MCQ Set" /> MCQ Set</label>
+              <label class="cl-type-radio"><input type="radio" class="cl-type-radio-input" name="clContentType" value="Notes" /> Notes</label>
+              <label class="cl-type-radio"><input type="radio" class="cl-type-radio-input" name="clContentType" value="Current Affairs" /> Current Affairs</label>
+            </div>
+          </div>
+
+          <!-- ── DYNAMIC: changes based on content type ── -->
+          <div id="clDynamicFields"></div>
+
+          <!-- ── ALWAYS SHOWN: Additional Details ── -->
+          <div class="cl-modal-section-title" style="margin-top:4px;">Additional Details</div>
+
+          <div class="cl-form-row">
+            <div class="cl-form-field">
+              <label class="cl-form-label">Tags</label>
+              <input type="text" class="cl-form-input" id="clTagsInput" placeholder="Add tags and press enter" />
+            </div>
+            <div class="cl-form-field">
+              <label class="cl-form-label">Difficulty Level</label>
+              <select class="cl-form-select" id="clDifficultySelect">
+                <option value="">Select difficulty level</option>
+                <option>Easy</option><option>Medium</option><option>Hard</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cl-form-row">
+            <div class="cl-form-field">
+              <label class="cl-form-label">Reference Source</label>
+              <input type="text" class="cl-form-input" id="clRefSource" placeholder="Enter source or reference" />
+            </div>
+            <div class="cl-form-field">
+              <label class="cl-form-label">Publish Date</label>
+              <div class="cl-datetime-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <input type="text" class="cl-date-input" id="clPublishDateInput" value="May 22, 2025" readonly />
+                <input type="text" class="cl-time-input" id="clPublishTimeInput" value="09:00 AM" readonly />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;color:var(--text-muted)"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="cl-modal-footer">
+          <button class="cl-modal-cancel" id="clCreateCancel">Cancel</button>
+          <button class="cl-modal-submit" id="clCreateSubmitBtn">Create Content</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ════ EXPORT MODAL ════ -->
+    <div class="cl-modal-overlay" id="clExportOverlay">
+      <div class="cl-modal cl-export-modal">
+        <div class="cl-modal-header">
+          <span class="cl-modal-title">Export Content</span>
+          <button class="cl-modal-close" id="clExportClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="cl-modal-body">
+
+          <!-- Choose Content -->
+          <div class="cl-export-section">
+            <div class="cl-export-section-title">Choose Content</div>
+            <label class="cl-export-choice">
+              <input type="radio" name="clExportChoice" value="all" />
+              <div class="cl-export-choice-body">
+                <div class="choice-label">All Content <span style="color:var(--text-muted);font-weight:400;">(256 items)</span></div>
+                <div class="choice-desc">Export all content from the library</div>
+              </div>
+            </label>
+            <label class="cl-export-choice selected">
+              <input type="radio" name="clExportChoice" value="filtered" checked />
+              <div class="cl-export-choice-body">
+                <div class="choice-label">Filtered Content <span style="color:var(--text-muted);font-weight:400;">(12 items)</span></div>
+                <div class="choice-desc">Export only the content matching current filters</div>
+              </div>
+            </label>
+            <label class="cl-export-choice">
+              <input type="radio" name="clExportChoice" value="selected" />
+              <div class="cl-export-choice-body">
+                <div class="choice-label">Selected Content <span style="color:var(--text-muted);font-weight:400;">(3 items)</span></div>
+                <div class="choice-desc">Export only selected content</div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Select Format -->
+          <div class="cl-export-section">
+            <div class="cl-export-section-title">Select Format</div>
+            <div class="cl-format-grid">
+              <div class="cl-format-card selected" data-fmt="excel">
+                <div class="cl-format-icon excel">📊</div>
+                <div>
+                  <div class="cl-format-label">Excel (.xlsx)</div>
+                  <div class="cl-format-desc">Best for data analysis</div>
+                </div>
+              </div>
+              <div class="cl-format-card" data-fmt="csv">
+                <div class="cl-format-icon csv">📄</div>
+                <div>
+                  <div class="cl-format-label">CSV (.csv)</div>
+                  <div class="cl-format-desc">Plain text format</div>
+                </div>
+              </div>
+              <div class="cl-format-card" data-fmt="pdf">
+                <div class="cl-format-icon pdf">📕</div>
+                <div>
+                  <div class="cl-format-label">PDF (.pdf)</div>
+                  <div class="cl-format-desc">Best for sharing</div>
+                </div>
+              </div>
+              <div class="cl-format-card" data-fmt="json">
+                <div class="cl-format-icon json">🔧</div>
+                <div>
+                  <div class="cl-format-label">JSON (.json)</div>
+                  <div class="cl-format-desc">Developer friendly</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Export Options -->
+          <div class="cl-export-section">
+            <div class="cl-export-section-title">Export Options</div>
+            <div class="cl-export-options">
+              <label class="cl-export-option">
+                <input type="checkbox" checked style="accent-color:var(--brand-primary);" />
+                <div class="cl-export-option-body">
+                  <div class="opt-label">Include Content Body</div>
+                  <div class="opt-desc">Export full content including summary, key points, explanations</div>
+                </div>
+              </label>
+              <label class="cl-export-option">
+                <input type="checkbox" checked style="accent-color:var(--brand-primary);" />
+                <div class="cl-export-option-body">
+                  <div class="opt-label">Include MCQs</div>
+                  <div class="opt-desc">Export all MCQs with options and answers</div>
+                </div>
+              </label>
+              <label class="cl-export-option">
+                <input type="checkbox" checked style="accent-color:var(--brand-primary);" />
+                <div class="cl-export-option-body">
+                  <div class="opt-label">Include Metadata</div>
+                  <div class="opt-desc">Export tags, author, dates, status and other details</div>
+                </div>
+              </label>
+              <label class="cl-export-option">
+                <input type="checkbox" style="accent-color:var(--brand-primary);" />
+                <div class="cl-export-option-body">
+                  <div class="opt-label">Include Images</div>
+                  <div class="opt-desc">Export images and attachments</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+        </div>
+        <div class="cl-modal-footer">
+          <button class="cl-modal-cancel" id="clExportCancel">Cancel</button>
+          <button class="cl-export-submit" id="clExportSubmit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export Content
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        &copy; 2025 <strong>Noviq</strong>. All rights reserved.
+      </div>
+      <div class="footer-right">
+        <a href="#">Privacy Policy</a>
+        <span class="footer-sep">·</span>
+        <a href="#">Terms of Use</a>
+        <span class="footer-sep">·</span>
+        <a href="#">Support</a>
+      </div>
+    </footer>
+
+  </div><!-- /main-area -->
+</div><!-- /app-shell -->
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/content-library.js"></script>
+
+
+    <!-- ════ PREVIEW DRAWER ════ -->
+    <div class="cl-preview-overlay" id="clPreviewOverlay">
+      <div class="cl-preview-drawer" id="clPreviewDrawer">
+        <div class="cl-preview-drawer-header">
+          <span class="cl-preview-drawer-title">Content Preview</span>
+          <button class="cl-preview-drawer-close" id="clPreviewDrawerClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="cl-preview-drawer-body" id="clPreviewDrawerBody">
+          <!-- Populated by JS -->
+        </div>
+        <div class="cl-preview-drawer-footer">
+          <button class="cl-preview-edit-btn" id="clPreviewEditBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            Edit Content
+          </button>
+          <button class="cl-preview-close-btn" id="clPreviewDrawerCloseBtn">Close</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

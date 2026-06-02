@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Management — Noviq</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/team.css" />
+</head>
+<body>
+
+<!-- Mobile sidebar overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="app-shell">
+
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar">
+
+      <div class="sidebar-logo">
+        <div class="logo">
+          <a href="/"><img src="../assets/images/logo.png" alt=""></a>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="dashboard.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </a>
+        <a class="nav-item" href="raw-news-inbox.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Raw News Inbox
+        </a>
+        <a class="nav-item" href="ai-processing.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          AI Processing
+        </a>
+        <a class="nav-item" href="content-editor.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Content Editor
+        </a>
+        <a class="nav-item" href="publish-queue.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Publish Queue
+        </a>
+        <a class="nav-item" href="content-library.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Content Library
+        </a>
+        <a class="nav-item" href="analytics.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          Analytics
+        </a>
+        <a class="nav-item active" href="team-management.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Team Management
+        </a>
+        <a class="nav-item" href="settings.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Settings
+        </a>
+      </nav>
+
+      <!-- <div class="sidebar-premium">
+        <div class="premium-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <div class="premium-title">You're on Premium Plan</div>
+        <div class="premium-desc">Unlimited access to all features and AI models.</div>
+        <button class="btn-upgrade">Upgrade Plan</button>
+      </div> -->
+
+      <div class="sidebar-user">
+        <div class="avatar-placeholder avatar-md" style="background:#F97316;font-size:13px;">SK</div>
+        <div class="user-info">
+          <div class="user-name">Sachin</div>
+          <div class="user-role">Admin</div>
+        </div>
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+
+    </aside>
+
+  <!-- ═══ MAIN AREA ═══ -->
+  <div class="main-area">
+
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header">
+      <button class="header-menu-btn" id="sidebarToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="header-search">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" class="search-input" placeholder="Search anything..." autocomplete="off" spellcheck="false" />
+        <!-- <span class="search-kbd">⌘K</span> -->
+      </div>
+
+      <div class="header-right">
+        <div class="header-notif">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          <span class="notif-badge">8</span>
+        </div>
+        <div class="header-user">
+          <div class="user-info">
+            <div class="user-name">Sachin</div>
+            <div class="user-role">Admin</div>
+          </div>
+          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+        <!-- ═══ PAGE CONTENT ═══ -->
+    <main class="page-content">
+
+      <!-- Page header -->
+      <div class="tm-page-header">
+        <div>
+          <h1 class="tm-page-title">Team Management</h1>
+          <p class="tm-page-subtitle">Manage your team members, roles and permissions.</p>
+        </div>
+        <div class="tm-header-actions">
+          <button class="tm-invite-btn" id="tmInviteBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+            Invite Member
+          </button>
+          <button class="tm-add-btn" id="tmAddBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add Team Member
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats row -->
+      <div class="tm-stats-row">
+        <div class="tm-stat-card">
+          <div class="tm-stat-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <div class="tm-stat-label">Total Members</div>
+            <div class="tm-stat-value" id="statTotal">18</div>
+            <div class="tm-stat-sub up">↑ 2 new this month</div>
+          </div>
+        </div>
+        <div class="tm-stat-card">
+          <div class="tm-stat-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <div class="tm-stat-label">Active Members</div>
+            <div class="tm-stat-value" id="statActive">16</div>
+            <div class="tm-stat-sub" id="statActivePct">89% of total members</div>
+          </div>
+        </div>
+        <div class="tm-stat-card">
+          <div class="tm-stat-icon orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <div class="tm-stat-label">Roles</div>
+            <div class="tm-stat-value" id="statRoles">6</div>
+            <div class="tm-stat-sub">System defined roles</div>
+          </div>
+        </div>
+        <div class="tm-stat-card">
+          <div class="tm-stat-icon purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div>
+            <div class="tm-stat-label">Permissions</div>
+            <div class="tm-stat-value" id="statPerms">24</div>
+            <div class="tm-stat-sub">Across all roles</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main layout: table + sidebar -->
+      <div class="tm-layout">
+
+        <!-- ── Table section ── -->
+        <div class="tm-table-section">
+
+          <!-- Search + filter bar -->
+          <div class="tm-filter-bar">
+            <div class="tm-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" class="tm-search-input" id="tmSearchInput" placeholder="Search by name, email or role…" />
+            </div>
+            <button class="tm-filter-btn" id="tmFilterBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+              Filter
+            </button>
+          </div>
+
+          <!-- Tabs -->
+          <div class="tm-tabs" style="padding:0 var(--space-4);background:var(--bg-white);border:1px solid var(--border-color);border-bottom:none;border-radius:var(--radius-lg) var(--radius-lg) 0 0;">
+            <button class="tm-tab active" data-tab="all"      id="tabAll">All Members (18)</button>
+            <button class="tm-tab"        data-tab="active"   id="tabActive">Active (16)</button>
+            <button class="tm-tab"        data-tab="inactive" id="tabInactive">Inactive (2)</button>
+            <button class="tm-tab"        data-tab="pending"  id="tabPending">Pending Invites (0)</button>
+          </div>
+
+          <!-- Table card -->
+          <div class="tm-table-card">
+            <table class="tm-table">
+              <colgroup>
+                <col class="col-member"><col class="col-email"><col class="col-role">
+                <col class="col-perms"><col class="col-status"><col class="col-active"><col class="col-actions">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="col-member">Member</th>
+                  <th class="col-email">Email</th>
+                  <th class="col-role">Role</th>
+                  <th class="col-perms">Permissions</th>
+                  <th class="col-status">Status</th>
+                  <th class="col-active">
+                    <span class="tm-th-sort">
+                      Last Active
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </span>
+                  </th>
+                  <th class="col-actions">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tmTbody">
+                <!-- Rendered by team.js -->
+              </tbody>
+            </table>
+
+            <!-- Pagination -->
+            <div class="tm-pagination">
+              <span class="tm-pagination-info" id="tmPaginationInfo">Showing 1 to 10 of 18 members</span>
+              <div class="tm-pagination-right">
+                <div class="tm-pg-pages" id="tmPages"></div>
+                <div class="tm-per-page">
+                  <select class="tm-per-page-select" id="tmPerPageSelect">
+                    <option value="10" selected>10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                  </select>
+                  per page
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /tm-table-section -->
+
+        <!-- ── Right sidebar ── -->
+        <div class="tm-sidebar">
+
+          <!-- Roles overview -->
+          <div class="tm-sidebar-card">
+            <div class="tm-roles-title">Roles Overview</div>
+            <div class="tm-roles-list" id="tmRolesList">
+              <!-- Rendered by team.js -->
+            </div>
+          </div>
+
+          <!-- Invite form -->
+          <div class="tm-sidebar-card">
+            <div class="tm-invite-title" id="tmSidebarInviteTitle" style="cursor:pointer;">Invite Team Member</div>
+            <div class="tm-invite-sub">Send an invitation to join your team.</div>
+            <div class="tm-invite-form">
+              <input type="email" class="tm-form-input" id="tmSidebarEmail" placeholder="Enter email address" />
+              <select class="tm-form-select" id="tmSidebarRole">
+                <option value="">Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="editor">Editor</option>
+                <option value="reviewer">Reviewer</option>
+                <option value="author">Author</option>
+                <option value="contributor">Contributor</option>
+                <option value="seo">SEO Specialist</option>
+                <option value="viewer">Viewer</option>
+                <option value="factchecker">Fact Checker</option>
+              </select>
+              <button class="tm-send-btn" id="tmSendInviteBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Invitation
+              </button>
+            </div>
+          </div>
+
+          <!-- Team Activity -->
+          <div class="tm-sidebar-card">
+            <div class="tm-activity-title">Team Activity</div>
+            <div class="tm-activity-sub">View team activity and audit logs.</div>
+            <button class="tm-audit-btn" id="tmAuditBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              View Audit Logs
+            </button>
+          </div>
+
+        </div><!-- /tm-sidebar -->
+
+      </div><!-- /tm-layout -->
+
+    </main>
+
+    <!-- ════ ADD / INVITE MEMBER MODAL ════ -->
+    <div class="tm-modal-overlay" id="tmAddOverlay">
+      <div class="tm-modal">
+        <div class="tm-modal-header">
+          <span class="tm-modal-title">Add Team Member</span>
+          <button class="tm-modal-close" id="tmAddClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="tm-modal-body">
+          <div class="tm-mfield-row">
+            <div class="tm-mfield">
+              <label class="tm-mlabel">First Name <span class="req">*</span></label>
+              <input type="text" class="tm-minput" id="tmAddFirstName" placeholder="Enter first name" />
+            </div>
+            <div class="tm-mfield">
+              <label class="tm-mlabel">Last Name</label>
+              <input type="text" class="tm-minput" id="tmAddLastName" placeholder="Enter last name" />
+            </div>
+          </div>
+          <div class="tm-mfield">
+            <label class="tm-mlabel">Email Address <span class="req">*</span></label>
+            <input type="email" class="tm-minput" id="tmAddEmail" placeholder="Enter email address" />
+          </div>
+          <div class="tm-mfield-row">
+            <div class="tm-mfield">
+              <label class="tm-mlabel">Role <span class="req">*</span></label>
+              <select class="tm-mselect" id="tmAddRole">
+                <option value="">Select role</option>
+                <option value="admin">Admin</option>
+                <option value="editor">Editor</option>
+                <option value="reviewer">Reviewer</option>
+                <option value="author">Author</option>
+                <option value="contributor">Contributor</option>
+                <option value="seo">SEO Specialist</option>
+                <option value="viewer">Viewer</option>
+                <option value="factchecker">Fact Checker</option>
+              </select>
+            </div>
+            <div class="tm-mfield">
+              <label class="tm-mlabel">Phone (optional)</label>
+              <input type="tel" class="tm-minput" id="tmAddPhone" placeholder="+91 00000 00000" />
+            </div>
+          </div>
+          <div class="tm-mfield">
+            <label class="tm-mlabel">Permissions</label>
+            <div class="tm-perm-grid">
+              <label class="tm-perm-check" data-perm="Create"><input type="checkbox" /> Create Content</label>
+              <label class="tm-perm-check" data-perm="Edit">  <input type="checkbox" /> Edit Content</label>
+              <label class="tm-perm-check" data-perm="Publish"><input type="checkbox" /> Publish Content</label>
+              <label class="tm-perm-check" data-perm="Review"><input type="checkbox" /> Review & Approve</label>
+              <label class="tm-perm-check" data-perm="Delete"><input type="checkbox" /> Delete Content</label>
+              <label class="tm-perm-check" data-perm="Comment"><input type="checkbox" /> Comments</label>
+              <label class="tm-perm-check" data-perm="SEO">   <input type="checkbox" /> SEO Tools</label>
+              <label class="tm-perm-check" data-perm="Analytics"><input type="checkbox" /> Analytics</label>
+            </div>
+          </div>
+        </div>
+        <div class="tm-modal-footer">
+          <button class="tm-modal-cancel" id="tmAddCancel">Cancel</button>
+          <button class="tm-modal-submit" id="tmAddSubmit">Add Member</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ INVITE MEMBER MODAL (separate from Add Member) ════ -->
+    <div class="tm-modal-overlay" id="tmInviteOverlay">
+      <div class="tm-modal" style="max-width:500px;">
+        <div class="tm-modal-header">
+          <span class="tm-modal-title">Invite Team Member</span>
+          <button class="tm-modal-close" id="tmInviteClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <div class="tm-modal-body" style="gap:var(--space-4);">
+
+          <!-- Hero area -->
+          <div class="tm-invite-modal-hero">
+            <div class="tm-invite-modal-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="tm-invite-modal-hero-title">Send an Invitation Link</div>
+              <div class="tm-invite-modal-hero-sub">The invited member will receive an email with a link to join your workspace.</div>
+            </div>
+          </div>
+
+          <!-- Email field — supports multiple -->
+          <div class="tm-mfield">
+            <label class="tm-mlabel">Email Address(es) <span class="req">*</span></label>
+            <div class="tm-invite-emails-wrap" id="tmInviteEmailsWrap">
+              <div class="tm-invite-tags" id="tmInviteEmailTags"></div>
+              <input type="email" class="tm-invite-email-input" id="tmInviteEmailInput"
+                placeholder="Enter email and press Enter…" />
+            </div>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:4px;">Press Enter or comma to add multiple emails</div>
+          </div>
+
+          <!-- Role -->
+          <div class="tm-mfield">
+            <label class="tm-mlabel">Role to Assign <span class="req">*</span></label>
+            <select class="tm-mselect" id="tmInviteRole">
+              <option value="">Select a role</option>
+              <option value="admin">Admin — Full access to everything</option>
+              <option value="editor">Editor — Create, edit, publish content</option>
+              <option value="reviewer">Reviewer — Review and approve content</option>
+              <option value="author">Author — Create and edit content</option>
+              <option value="contributor">Contributor — Create content only</option>
+              <option value="seo">SEO Specialist — SEO tools and metadata</option>
+              <option value="viewer">Viewer — View only access</option>
+              <option value="factchecker">Fact Checker — Review and fact-check</option>
+            </select>
+          </div>
+
+          <!-- Role permissions preview -->
+          <div class="tm-invite-role-preview" id="tmInviteRolePreview" style="display:none;">
+            <div class="tm-invite-role-preview-label">This role includes:</div>
+            <div class="tm-invite-role-preview-perms" id="tmInviteRolePerms"></div>
+          </div>
+
+          <!-- Personal message -->
+          <div class="tm-mfield">
+            <label class="tm-mlabel">Personal Message (optional)</label>
+            <textarea class="tm-minput" id="tmInviteMessage" rows="3"
+              style="resize:none;line-height:1.6;"
+              placeholder="Add a welcome note to your invitation…"></textarea>
+          </div>
+
+          <!-- Link expiry -->
+          <div class="tm-mfield">
+            <label class="tm-mlabel">Link Expires After</label>
+            <select class="tm-mselect" id="tmInviteExpiry">
+              <option value="24h">24 hours</option>
+              <option value="3d" selected>3 days</option>
+              <option value="7d">7 days</option>
+              <option value="never">Never expires</option>
+            </select>
+          </div>
+
+          <!-- Copy link row -->
+          <div class="tm-invite-copy-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            Or share the invite link directly
+            <button class="tm-copy-link-btn" id="tmCopyLinkBtn">Copy Link</button>
+          </div>
+
+        </div>
+
+        <div class="tm-modal-footer">
+          <button class="tm-modal-cancel" id="tmInviteCancel">Cancel</button>
+          <button class="tm-modal-submit" id="tmInviteSubmit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;margin-right:4px;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Invitation
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- ════ EDIT MEMBER MODAL ════ -->
+    <div class="tm-modal-overlay" id="tmEditOverlay">
+      <div class="tm-modal">
+        <div class="tm-modal-header">
+          <span class="tm-modal-title">Edit Member</span>
+          <button class="tm-modal-close" id="tmEditClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="tm-modal-body">
+          <div class="tm-edit-avatar-row">
+            <div class="tm-edit-avatar" id="tmEditAvatar"><span id="tmEditAvatarInit">SK</span></div>
+            <div>
+              <div style="font-size:var(--font-size-md);font-weight:700;color:var(--text-primary)" id="tmEditName">Member Name</div>
+              <div style="font-size:var(--font-size-xs);color:var(--text-muted)">Edit member details below</div>
+            </div>
+          </div>
+          <div class="tm-mfield">
+            <label class="tm-mlabel">Email Address</label>
+            <input type="email" class="tm-minput" id="tmEditEmail" />
+          </div>
+          <div class="tm-mfield-row">
+            <div class="tm-mfield">
+              <label class="tm-mlabel">Role</label>
+              <select class="tm-mselect" id="tmEditRole">
+                <option value="admin">Admin</option>
+                <option value="editor">Editor</option>
+                <option value="reviewer">Reviewer</option>
+                <option value="author">Author</option>
+                <option value="contributor">Contributor</option>
+                <option value="seo">SEO Specialist</option>
+                <option value="viewer">Viewer</option>
+                <option value="factchecker">Fact Checker</option>
+              </select>
+            </div>
+            <div class="tm-mfield">
+              <label class="tm-mlabel">Status</label>
+              <select class="tm-mselect" id="tmEditStatus">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="tm-modal-footer">
+          <button class="tm-modal-cancel" id="tmEditCancel">Cancel</button>
+          <button class="tm-modal-submit" id="tmEditSave">Save Changes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ REMOVE CONFIRM MODAL ════ -->
+    <div class="tm-modal-overlay" id="tmRemoveOverlay">
+      <div class="tm-modal" style="max-width:420px;">
+        <div class="tm-modal-header">
+          <span class="tm-modal-title">Remove Member</span>
+          <button class="tm-modal-close" id="tmRemoveClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="tm-modal-body" style="gap:var(--space-3);">
+          <div style="text-align:center;padding:8px 0;">
+            <div style="font-size:40px;margin-bottom:12px;">⚠️</div>
+            <p style="font-size:var(--font-size-sm);color:var(--text-secondary);line-height:1.6;">
+              Are you sure you want to remove<br>
+              <strong id="tmRemoveName">Member Name</strong>
+              (<span id="tmRemoveEmail" style="color:var(--text-muted)"></span>)<br>
+              from the team? This action cannot be undone.
+            </p>
+          </div>
+        </div>
+        <div class="tm-modal-footer">
+          <button class="tm-modal-cancel" id="tmRemoveCancel">Keep Member</button>
+          <button class="tm-modal-submit danger" id="tmRemoveConfirm">Remove Member</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ AUDIT LOG MODAL ════ -->
+    <div class="tm-modal-overlay" id="tmAuditOverlay">
+      <div class="tm-modal" style="max-width:580px;">
+        <div class="tm-modal-header">
+          <span class="tm-modal-title">Team Audit Log</span>
+          <button class="tm-modal-close" id="tmAuditClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="tm-modal-body" style="padding:0 var(--space-5);">
+          <div class="tm-audit-list" id="tmAuditList">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <div class="tm-modal-footer">
+          <button class="tm-modal-cancel" id="tmAuditCloseBtn" onclick="document.getElementById('tmAuditOverlay').classList.remove('open')">Close</button>
+          <button class="tm-modal-submit" onclick="showTmToast('Exporting audit log…','info')">Export Log</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        &copy; 2025 <strong>Noviq</strong>. All rights reserved.
+      </div>
+      <div class="footer-right">
+        <a href="#">Privacy Policy</a>
+        <span class="footer-sep">·</span>
+        <a href="#">Terms of Use</a>
+        <span class="footer-sep">·</span>
+        <a href="#">Support</a>
+      </div>
+    </footer>
+
+  </div><!-- /main-area -->
+</div><!-- /app-shell -->
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/team.js"></script>
+
+</body>
+</html>

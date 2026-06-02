@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Editor — Noviq</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/content-editor.css" />
+</head>
+<body>
+
+<!-- Mobile sidebar overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="app-shell">
+
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar">
+
+      <div class="sidebar-logo">
+        <div class="logo">
+          <a href="/"><img src="../assets/images/logo.png" alt=""></a>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="nav-item" href="dashboard.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </a>
+        <a class="nav-item" href="raw-news-inbox.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Raw News Inbox
+        </a>
+        <a class="nav-item" href="ai-processing.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          AI Processing
+        </a>
+        <a class="nav-item active" href="content-editor.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Content Editor
+        </a>
+        <a class="nav-item" href="publish-queue.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Publish Queue
+        </a>
+        <a class="nav-item" href="content-library.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Content Library
+        </a>
+        <a class="nav-item" href="analytics.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          Analytics
+        </a>
+        <a class="nav-item" href="team-management.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Team Management
+        </a>
+        <a class="nav-item" href="settings.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Settings
+        </a>
+      </nav>
+
+      <!-- <div class="sidebar-premium">
+        <div class="premium-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <div class="premium-title">You're on Premium Plan</div>
+        <div class="premium-desc">Unlimited access to all features and AI models.</div>
+        <button class="btn-upgrade">Upgrade Plan</button>
+      </div> -->
+
+      <div class="sidebar-user">
+        <div class="avatar-placeholder avatar-md" style="background:#F97316;font-size:13px;">SK</div>
+        <div class="user-info">
+          <div class="user-name">Sachin</div>
+          <div class="user-role">Admin</div>
+        </div>
+        <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+
+    </aside>
+
+  <!-- ═══ MAIN AREA ═══ -->
+  <div class="main-area">
+
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header">
+      <button class="header-menu-btn" id="sidebarToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="header-search">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" class="search-input" placeholder="Search anything..." autocomplete="off" spellcheck="false" />
+        <!-- <span class="search-kbd">⌘K</span> -->
+      </div>
+
+      <div class="header-right">
+        <div class="header-notif">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          <span class="notif-badge">8</span>
+        </div>
+        <div class="header-user">
+          <div class="user-info">
+            <div class="user-name">Sachin</div>
+            <div class="user-role">Admin</div>
+          </div>
+          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+        <!-- ═══ PAGE CONTENT ═══ -->
+    <main class="page-content">
+
+      <!-- Page header -->
+      <div class="ce-page-header">
+        <div class="ce-page-header-left">
+          <div class="ce-title">Content Editor</div>
+          <div class="ce-subtitle">Create, edit and finalize exam-ready content.</div>
+        </div>
+        <div class="ce-header-actions">
+          <span class="ce-autosave">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span id="ceAutosaveLabel">Autosaved 2 min ago</span>
+          </span>
+          <button class="ce-btn-save-draft" id="ceSaveDraftBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            Save Draft
+          </button>
+          <button class="ce-btn-preview" id="cePreviewBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            Preview
+          </button>
+        </div>
+      </div>
+
+      <!-- Two-column layout -->
+      <div class="ce-layout">
+
+        <!-- ══ LEFT: Editor Card ══ -->
+        <div class="ce-editor-card">
+
+          <!-- Title -->
+          <div>
+            <div class="ce-field-label">Title <span class="required">*</span></div>
+            <textarea class="ce-title-input" id="ceTitle" rows="2" maxlength="150" placeholder="Enter article title…"></textarea>
+            <div class="ce-char-count" id="ceTitleCount">0/150 characters</div>
+          </div>
+
+          <!-- Summary -->
+          <div>
+            <div class="ce-field-label">Summary <span class="required">*</span></div>
+            <div class="ce-toolbar">
+              <select class="ce-toolbar-select">
+                <option>Paragraph</option><option>Heading 1</option><option>Heading 2</option>
+              </select>
+              <button class="ce-tb-btn" data-fmt="bold"   title="Bold"><strong>B</strong></button>
+              <button class="ce-tb-btn" data-fmt="italic" title="Italic"><em>I</em></button>
+              <button class="ce-tb-btn" title="Underline"><u>U</u></button>
+              <div class="ce-tb-sep"></div>
+              <button class="ce-tb-btn" title="Bullet list">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/><circle cx="4" cy="18" r="1" fill="currentColor"/></svg>
+              </button>
+              <button class="ce-tb-btn" title="Numbered list">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="10" y1="6" x2="21" y2="6"/><line x1="10" y1="12" x2="21" y2="12"/><line x1="10" y1="18" x2="21" y2="18"/><path d="M4 6h1v4"/><path d="M4 10h2"/><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+              </button>
+              <div class="ce-tb-sep"></div>
+              <button class="ce-tb-btn" title="Align left">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="17" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/></svg>
+              </button>
+              <button class="ce-tb-btn" title="Align center">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="10" x2="6" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="18" y1="18" x2="6" y2="18"/></svg>
+              </button>
+              <button class="ce-tb-btn" title="Align right">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="10" x2="7" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="7" y2="18"/></svg>
+              </button>
+              <div class="ce-tb-sep"></div>
+              <button class="ce-tb-btn" title="Insert link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              </button>
+              <button class="ce-tb-btn" title="Insert image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </button>
+            </div>
+            <textarea class="ce-editor-area" id="ceSummary" placeholder="Write the article summary…"></textarea>
+            <div class="ce-word-count" id="ceSummaryWords">0 words</div>
+          </div>
+
+          <!-- Key Facts -->
+          <div>
+            <div class="ce-field-label">Key Facts (Bullet Points) <span class="required">*</span></div>
+            <div class="ce-facts-list" id="ceFactsList"></div>
+            <button class="ce-add-btn" id="ceAddFact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add Key Fact
+            </button>
+          </div>
+
+          <!-- MCQ Builder -->
+          <div>
+            <div class="ce-field-label">MCQ Builder <span class="required">*</span></div>
+            <div class="ce-mcq-grid">
+              <!-- Left: Question + Options -->
+              <div class="ce-mcq-left">
+                <div>
+                  <div class="ce-field-label" style="font-weight:500;color:var(--text-secondary);font-size:12px;">Question</div>
+                  <input class="ce-input" type="text" id="ceMcqQuestion" maxlength="200" placeholder="Enter the MCQ question…" />
+                  <div class="ce-char-sub" id="ceMcqQCount">0/200</div>
+                </div>
+                <div>
+                  <div class="ce-field-label" style="font-weight:500;color:var(--text-secondary);font-size:12px;margin-bottom:var(--space-2);">Options</div>
+                  <div class="ce-options-list" id="ceOptionsList"></div>
+                  <button class="ce-add-btn" id="ceAddOption" style="margin-top:var(--space-2);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    Add Option
+                  </button>
+                </div>
+              </div>
+              <!-- Right: Explanation -->
+              <div class="ce-mcq-right">
+                <div class="ce-field-label" style="font-weight:500;color:var(--text-secondary);font-size:12px;">Explanation <span class="required">*</span></div>
+                <div class="ce-explanation-editor">
+                  <div class="ce-exp-toolbar">
+                    <button class="ce-tb-btn" title="Bold"><strong>B</strong></button>
+                    <button class="ce-tb-btn" title="Italic"><em>I</em></button>
+                    <button class="ce-tb-btn" title="Underline"><u>U</u></button>
+                    <div class="ce-tb-sep"></div>
+                    <button class="ce-tb-btn" title="Bullet list">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/></svg>
+                    </button>
+                    <button class="ce-tb-btn" title="Numbered list">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="10" y1="6" x2="20" y2="6"/><line x1="10" y1="12" x2="20" y2="12"/><path d="M4 6h1v4"/></svg>
+                    </button>
+                    <div class="ce-tb-sep"></div>
+                    <button class="ce-tb-btn" title="Link">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    </button>
+                  </div>
+                  <textarea class="ce-exp-area" id="ceExplanation" placeholder="Write explanation for the correct answer…"></textarea>
+                  <div class="ce-word-count" id="ceExpWords">0 words</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /ce-editor-card -->
+
+        <!-- ══ RIGHT: Content Details Sidebar ══ -->
+        <div class="ce-sidebar">
+          <div class="ce-sidebar-title">Content Details</div>
+
+          <div class="ce-sidebar-field">
+            <label class="ce-sidebar-label">Subject <span class="required">*</span></label>
+            <select class="ce-sidebar-select" id="ceSubject">
+              <option>International Relations</option>
+              <option>Economy</option>
+              <option>Polity</option>
+              <option>Environment</option>
+              <option>Science &amp; Tech</option>
+              <option>History</option>
+              <option>Geography</option>
+            </select>
+          </div>
+
+          <div class="ce-sidebar-field">
+            <label class="ce-sidebar-label">Sub-Subject</label>
+            <select class="ce-sidebar-select" id="ceSubSubject">
+              <option>International Organizations</option>
+              <option>Bilateral Relations</option>
+              <option>Trade Agreements</option>
+              <option>Foreign Policy</option>
+            </select>
+          </div>
+
+          <div class="ce-sidebar-field">
+            <label class="ce-sidebar-label">Exam Type <span class="required">*</span></label>
+            <div class="ce-exam-grid">
+              <label class="ce-exam-check" data-val="UPSC"><input type="checkbox" /> UPSC</label>
+              <label class="ce-exam-check" data-val="SSC"><input type="checkbox" /> SSC</label>
+              <label class="ce-exam-check" data-val="IBPS"><input type="checkbox" /> IBPS</label>
+              <label class="ce-exam-check" data-val="RRB"><input type="checkbox" /> RRB</label>
+            </div>
+          </div>
+
+          <div class="ce-sidebar-field">
+            <label class="ce-sidebar-label">Difficulty Level</label>
+            <select class="ce-sidebar-select" id="ceDifficulty">
+              <option>Easy</option>
+              <option>Medium</option>
+              <option>Hard</option>
+            </select>
+          </div>
+
+          <div class="ce-sidebar-field">
+            <label class="ce-sidebar-label">Tags</label>
+            <div class="ce-tags-wrap" id="ceTagsWrap">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <div class="ce-sidebar-field">
+            <label class="ce-sidebar-label">Reference Source</label>
+            <input type="text" class="ce-ref-input" id="ceRefSource" placeholder="e.g. The Hindu" />
+          </div>
+
+          <div class="ce-sidebar-field">
+            <label class="ce-sidebar-label">Publish Date</label>
+            <div class="ce-publish-opts">
+              <label class="ce-publish-opt" data-mode="now">
+                <input type="radio" name="cePublish" /> Publish Now
+              </label>
+              <label class="ce-publish-opt active" data-mode="schedule">
+                <input type="radio" name="cePublish" checked /> Schedule
+              </label>
+            </div>
+            <div class="ce-datetime-row" id="ceDateTimeRow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <input type="text" class="ce-datetime-input" value="May 23, 2025" />
+              <input type="text" class="ce-time-input" value="09:00 AM" />
+              <svg class="ce-time-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+          </div>
+
+          <div class="ce-sidebar-field">
+            <label class="ce-sidebar-label">Status</label>
+            <span class="ce-status-badge draft" id="ceStatusBadge">Draft</span>
+          </div>
+
+        </div><!-- /ce-sidebar -->
+
+      </div><!-- /ce-layout -->
+
+      <!-- Bottom action bar -->
+      <div class="ce-bottom-bar">
+        <button class="ce-btn-save-draft" id="ceSaveDraftBtn2" onclick="document.getElementById('ceSaveDraftBtn').click()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg>
+          Save Draft
+        </button>
+        <button class="ce-btn-approve" id="ceApproveBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Approve
+        </button>
+        <button class="ce-btn-publish" id="cePublishBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send to Publish
+        </button>
+      </div>
+
+    </main>
+
+    <!-- ════ PREVIEW MODAL ════ -->
+    <div class="ce-preview-overlay" id="cePreviewOverlay">
+      <div class="ce-preview-modal">
+
+        <div class="ce-preview-modal-header">
+          <span class="ce-preview-modal-title">Preview Content</span>
+          <button class="ce-preview-modal-close" id="cePreviewCloseBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <div class="ce-preview-modal-body">
+
+          <!-- Left: article content -->
+          <div class="ce-preview-content">
+            <span class="ce-preview-article-badge">ARTICLE</span>
+            <h2 class="ce-preview-art-title" id="pvTitle"></h2>
+            <div class="ce-preview-tags" id="pvTags"></div>
+
+            <!-- Summary section -->
+            <div class="ce-preview-section">
+              <div class="ce-preview-section-title">
+                <span class="icon">📝</span> Summary <div class="line"></div>
+              </div>
+              <p class="ce-preview-summary-text" id="pvSummary"></p>
+            </div>
+
+            <!-- Key Facts section -->
+            <div class="ce-preview-section">
+              <div class="ce-preview-section-title">
+                <span class="icon">🔑</span> Key Facts <div class="line"></div>
+              </div>
+              <ul class="ce-preview-facts-list" id="pvFacts"></ul>
+            </div>
+
+            <!-- MCQ section -->
+            <div class="ce-preview-section">
+              <div class="ce-preview-section-title">
+                <span class="icon">🟠</span> MCQ <div class="line"></div>
+              </div>
+              <div class="ce-preview-mcq-q" id="pvMcqQuestion"></div>
+              <div class="ce-preview-mcq-opts" id="pvMcqOptions"></div>
+            </div>
+
+            <!-- Explanation -->
+            <div class="ce-preview-section">
+              <div class="ce-preview-section-title">
+                <span class="icon">💡</span> Explanation <div class="line"></div>
+              </div>
+              <p class="ce-preview-explanation" id="pvExplanation"></p>
+            </div>
+          </div>
+
+          <!-- Right: content details -->
+          <div class="ce-preview-details">
+            <div class="ce-preview-details-title">Content Details</div>
+            <div class="ce-detail-rows">
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+                <div><div class="ce-detail-key">Content Type</div><div class="ce-detail-val">Article</div></div>
+              </div>
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+                <div><div class="ce-detail-key">Subject</div><div class="ce-detail-val" id="pvDetailSubject"></div></div>
+              </div>
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                <div><div class="ce-detail-key">Sub-Subject</div><div class="ce-detail-val" id="pvDetailSubSub"></div></div>
+              </div>
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+                <div>
+                  <div class="ce-detail-key">Exam Type</div>
+                  <div class="ce-detail-exam-types" id="pvDetailExams"></div>
+                </div>
+              </div>
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                <div><div class="ce-detail-key">Difficulty Level</div><div class="ce-detail-val" id="pvDetailDifficulty"></div></div>
+              </div>
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                <div><div class="ce-detail-key">Tags</div><div class="ce-detail-tags" id="pvDetailTags"></div></div>
+              </div>
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <div><div class="ce-detail-key">Reference Source</div><div class="ce-detail-val" id="pvDetailSource"></div></div>
+              </div>
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <div><div class="ce-detail-key">Publish Date</div><div class="ce-detail-val" id="pvDetailPublishDate"></div></div>
+              </div>
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <div><div class="ce-detail-key">Status</div><span class="ce-detail-status-badge draft" id="pvDetailStatus">Draft</span></div>
+              </div>
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+                <div><div class="ce-detail-key">Word Count</div><div class="ce-detail-val" id="pvDetailWords">—</div></div>
+              </div>
+
+              <div class="ce-detail-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <div><div class="ce-detail-key">Created By</div><div class="ce-detail-val">Sachin</div></div>
+              </div>
+
+            </div>
+
+            <div class="ce-preview-info-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              This is how the content will appear to learners once published.
+            </div>
+          </div>
+
+        </div><!-- /ce-preview-modal-body -->
+
+        <div class="ce-preview-modal-footer">
+          <button class="ce-preview-close-btn" id="cePreviewClose2">Close</button>
+          <button class="ce-preview-edit-btn" id="cePreviewEditBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            Edit Content
+          </button>
+        </div>
+
+      </div>
+    </div><!-- /ce-preview-overlay -->
+
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="site-footer">
+      <div class="footer-left">
+        &copy; 2025 <strong>Noviq</strong>. All rights reserved.
+      </div>
+      <div class="footer-right">
+        <a href="#">Privacy Policy</a>
+        <span class="footer-sep">·</span>
+        <a href="#">Terms of Use</a>
+        <span class="footer-sep">·</span>
+        <a href="#">Support</a>
+      </div>
+    </footer>
+
+  </div><!-- /main-area -->
+</div><!-- /app-shell -->
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/content-editor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+/* ============================================================
+   GLOBAL CSS — Noviq
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap');
+
+/* ── Variables ── */
+:root {
+  --brand-primary:       #F97316;
+  --brand-primary-light: #FFF7ED;
+  --brand-primary-mid:   #FDBA74;
+  --brand-dark:          #EA580C;
+
+  --bg-base:      #F8F9FB;
+  --bg-white:     #FFFFFF;
+  --border-color: #E8ECF0;
+  --border-light: #F1F4F7;
+
+  --text-primary:   #111827;
+  --text-secondary: #6B7280;
+  --text-muted:     #9CA3AF;
+  --text-inverse:   #FFFFFF;
+
+  --color-success:    #10B981;
+  --color-success-bg: #ECFDF5;
+  --color-warning:    #F59E0B;
+  --color-warning-bg: #FFFBEB;
+  --color-danger:     #EF4444;
+  --color-danger-bg:  #FEF2F2;
+  --color-info:       #3B82F6;
+  --color-info-bg:    #EFF6FF;
+
+  --space-1: 4px;  --space-2: 8px;   --space-3: 12px;
+  --space-4: 16px; --space-5: 20px;  --space-6: 24px;
+  --space-8: 32px; --space-10: 40px;
+
+  --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px;
+  --radius-xl: 20px; --radius-full: 9999px;
+
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.04);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.10), 0 4px 8px rgba(0,0,0,.06);
+
+  --sidebar-width: 220px;
+  --header-height: 64px;
+
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --font-size-xs:   11px; --font-size-sm:   13px;
+  --font-size-base: 14px; --font-size-md:   15px;
+  --font-size-lg:   18px; --font-size-xl:   22px;
+  --font-size-2xl:  28px; --font-size-3xl:  36px;
+
+  --transition-fast:   150ms ease;
+  --transition-normal: 260ms ease;
+  --transition-slow:   400ms ease;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 14px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  background: var(--bg-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a   { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+img, svg { display: block; max-width: 100%; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; font-size: inherit; }
+input, textarea, select { font-family: inherit; font-size: inherit; outline: none; border: none; background: none; }
+
+/* ── App Shell ── */
+.app-shell { display: flex; min-height: 100vh; }
+
+/* SIDEBAR
+   JS controls width (desktop) and transform (mobile) via inline styles.
+   This base rule just sets position + transition.                        */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  z-index: 100;
+  overflow: hidden;
+  transition: width 260ms ease, transform 260ms ease;
+}
+
+/* MAIN AREA
+   JS controls margin-left via inline styles on desktop.                  */
+.main-area {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: margin-left 260ms ease;
+}
+
+.page-content {
+  flex: 1;
+  padding: var(--space-6);
+  overflow-y: auto;
+}
+
+/* OVERLAY
+   JS sets display/opacity/pointerEvents directly.                        */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.46);
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+
+/* ── Utilities ── */
+.text-xs{font-size:var(--font-size-xs)}.text-sm{font-size:var(--font-size-sm)}
+.text-base{font-size:var(--font-size-base)}.text-md{font-size:var(--font-size-md)}
+.text-lg{font-size:var(--font-size-lg)}.text-xl{font-size:var(--font-size-xl)}
+.text-2xl{font-size:var(--font-size-2xl)}
+.font-normal{font-weight:400}.font-medium{font-weight:500}
+.font-semibold{font-weight:600}.font-bold{font-weight:700}
+.text-primary{color:var(--text-primary)}.text-secondary{color:var(--text-secondary)}
+.text-muted{color:var(--text-muted)}.text-brand{color:var(--brand-primary)}
+.text-success{color:var(--color-success)}.text-danger{color:var(--color-danger)}
+.text-warning{color:var(--color-warning)}
+.flex{display:flex}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}
+.items-center{align-items:center}.items-start{align-items:flex-start}
+.items-end{align-items:flex-end}.justify-between{justify-content:space-between}
+.justify-center{justify-content:center}.justify-end{justify-content:flex-end}
+.gap-1{gap:var(--space-1)}.gap-2{gap:var(--space-2)}.gap-3{gap:var(--space-3)}
+.gap-4{gap:var(--space-4)}.gap-6{gap:var(--space-6)}.flex-1{flex:1}
+.p-2{padding:var(--space-2)}.p-3{padding:var(--space-3)}.p-4{padding:var(--space-4)}
+.p-5{padding:var(--space-5)}.p-6{padding:var(--space-6)}
+.mt-1{margin-top:var(--space-1)}.mt-2{margin-top:var(--space-2)}
+.mt-4{margin-top:var(--space-4)}.mb-2{margin-bottom:var(--space-2)}
+.mb-4{margin-bottom:var(--space-4)}.mb-6{margin-bottom:var(--space-6)}
+
+/* ── Card ── */
+.card { background:var(--bg-white); border-radius:var(--radius-lg); border:1px solid var(--border-color); box-shadow:var(--shadow-sm); }
+
+/* ── Badge ── */
+.badge { display:inline-flex; align-items:center; gap:var(--space-1); padding:2px var(--space-2); border-radius:var(--radius-full); font-size:var(--font-size-xs); font-weight:600; white-space:nowrap; }
+.badge-success{background:var(--color-success-bg);color:var(--color-success)}
+.badge-danger {background:var(--color-danger-bg); color:var(--color-danger)}
+.badge-warning{background:var(--color-warning-bg);color:var(--color-warning)}
+.badge-info   {background:var(--color-info-bg);   color:var(--color-info)}
+.badge-brand  {background:var(--brand-primary-light);color:var(--brand-primary)}
+
+/* ── Buttons ── */
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:var(--space-2); padding:var(--space-2) var(--space-4); border-radius:var(--radius-md); font-size:var(--font-size-sm); font-weight:500; transition:all var(--transition-fast); white-space:nowrap; }
+.btn-primary { background:var(--brand-primary); color:#fff; border:1.5px solid var(--brand-primary); }
+.btn-primary:hover { background:var(--brand-dark); border-color:var(--brand-dark); }
+.btn-outline { background:transparent; color:var(--brand-primary); border:1.5px solid var(--brand-primary); }
+.btn-outline:hover { background:var(--brand-primary-light); }
+.btn-ghost { background:transparent; color:var(--text-secondary); border:1.5px solid var(--border-color); }
+.btn-ghost:hover { background:var(--bg-base); color:var(--text-primary); }
+
+/* ── Avatar ── */
+.avatar{border-radius:var(--radius-full);object-fit:cover;flex-shrink:0}
+.avatar-sm{width:28px;height:28px}.avatar-md{width:36px;height:36px}.avatar-lg{width:44px;height:44px}
+.avatar-placeholder { display:flex; align-items:center; justify-content:center; border-radius:var(--radius-full); font-weight:600; color:#fff; background:var(--brand-primary); flex-shrink:0; }
+
+.divider{border:none;border-top:1px solid var(--border-color)}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border-color);border-radius:var(--radius-full)}
+::-webkit-scrollbar-thumb:hover{background:var(--text-muted)}
+
+/* ── Empty page state ── */
+.page-empty { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:60vh; gap:var(--space-4); color:var(--text-muted); }
+.page-empty .empty-icon{width:56px;height:56px;opacity:.3}
+.page-empty h2{font-size:var(--font-size-lg);font-weight:600;color:var(--text-secondary)}
+.page-empty p{font-size:var(--font-size-sm);color:var(--text-muted)}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════ */
+
+/* Tablet */
+@media (max-width: 1100px) {
+  :root { --sidebar-width: 200px; }
+}
+
+/* Mobile — sidebar slides over content, main area is full width */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 240px;         /* always full width on mobile */
+    transform: translateX(-100%); /* hidden off-screen; JS sets inline transform to open */
+  }
+
+  .main-area {
+    margin-left: 0;       /* full width; JS does NOT touch margin on mobile */
+    width: 100%;
+  }
+
+  .sidebar-overlay {
+    display: none;        /* JS sets display:block when opening */
+  }
+
+  /* Header adjustments */
+  .header { padding: 0 var(--space-4); gap: var(--space-3); }
+  .header-search { max-width: none; flex: 1; }
+  .header-user .user-info { display: none; }
+  .search-kbd { display: none; }
+
+  .page-content { padding: var(--space-4); }
+
+  .site-footer {
+    flex-direction: column;
+    gap: var(--space-2);
+    text-align: center;
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content { padding: var(--space-3); }
+  .header { padding: 0 var(--space-3); gap: var(--space-2); }
+}
+
+/* ════════════════════════════════════════════════════════════
+   GLOBAL MOBILE RESPONSIVE — Tables, Cards, Grids
+   Applies across ALL pages. No page-specific overrides needed.
+════════════════════════════════════════════════════════════ */
+
+/* ── Universal table scroll wrapper ─────────────────────── */
+/* Any table inside a card becomes horizontally scrollable
+   on small screens instead of overflowing the layout.        */
+.table-scroll-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── Scrollable table hint (visible on small screens) ────── */
+@media (max-width: 640px) {
+  /* Make all data tables horizontally scrollable */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+
+  /* Keep thead/tbody/tr/td as their semantic roles inside the block */
+  thead, tbody, tfoot { display: table; width: 100%; }
+
+  /* Prevent text wrapping in table cells — let the table scroll instead */
+  /* th, td { white-space: nowrap; } */
+
+  .cl-preview-overlay {
+    display: none;
+  }
+}
+
+/* ── Grid layouts → single column on mobile ──────────────── */
+@media (max-width: 640px) {
+  /* Any CSS grid that uses auto/repeat patterns */
+  [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Card stacking ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .card-grid-2,
+  .card-grid-3,
+  .card-grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Modals — full-screen on very small devices ──────────── */
+@media (max-width: 480px) {
+  /* Any element with .modal class or common modal patterns */
+  [class*="modal"],
+  [class*="-overlay"] > [class*="-modal"],
+  [class*="-overlay"] > [class*="-card"],
+  [class*="-overlay"] > div:first-child {
+    border-radius: var(--radius-lg) !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+}
+
+/* ── Toast — full width on mobile ────────────────────────── */
+@media (max-width: 640px) {
+  #toastWrap {
+    left: var(--space-3) !important;
+    right: var(--space-3) !important;
+    bottom: var(--space-4) !important;
+    width: auto !important;
+  }
+}
