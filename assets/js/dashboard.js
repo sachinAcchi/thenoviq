@@ -1,5 +1,5 @@
 /* ============================================================
-   DASHBOARD JS — ExamPrep Content Studio
+   DASHBOARD JS — Noviq
    Charts · Activity feed · Top articles · Date picker
    All topbar / shared UI lives in main.js
    ============================================================ */

@@ -1,5 +1,5 @@
 /* ============================================================
-   MAIN JS — ExamPrep Content Studio
+   MAIN JS — Noviq
    Hamburger · Sidebar · Search · Topbar (Profile / Notifications)
    These run on EVERY page.
    ============================================================ */
@@ -239,7 +239,7 @@
         '</div>' +
         '<div class="profile-modal-fields">' +
           '<div class="profile-field"><label>Full Name</label><input type="text" value="Sachin M" class="ui-input" /></div>' +
-          '<div class="profile-field"><label>Email</label><input type="email" value="saurabh@examprep.in" class="ui-input" /></div>' +
+          '<div class="profile-field"><label>Email</label><input type="email" value="sachin@thenoviq.co.in" class="ui-input" /></div>' +
           '<div class="profile-field"><label>Role</label><input type="text" value="Admin" class="ui-input" readonly /></div>' +
           '<div class="profile-field"><label>Organisation</label><input type="text" value="ExamPrep Academy" class="ui-input" /></div>' +
         '</div>' +
@@ -253,7 +253,7 @@
     openModal('Sign Out',
       '<div style="text-align:center;padding:8px 0 4px;">' +
         '<div style="font-size:40px;margin-bottom:12px;">\uD83D\uDC4B</div>' +
-        '<p style="color:var(--text-secondary);font-size:14px;line-height:1.6;">Are you sure you want to sign out of<br><strong>ExamPrep Content Studio</strong>?</p>' +
+        '<p style="color:var(--text-secondary);font-size:14px;line-height:1.6;">Are you sure you want to sign out of<br><strong>Noviq</strong>?</p>' +
       '</div>',
       '<button class="btn btn-ghost" onclick="closeModal()">Stay Signed In</button>' +
       '<button class="btn btn-primary" style="background:var(--color-danger);border-color:var(--color-danger);" onclick="showToast(\'Signed out. Redirecting\u2026\',\'info\');closeModal()">Sign Out</button>'

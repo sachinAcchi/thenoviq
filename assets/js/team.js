@@ -17,7 +17,7 @@ const ROLES = [
 
 /* ── Members data ── */
 var MEMBERS = [
-  { id:1,  name:'Sachin', email:'saurabh.kumar@examprep.com', roleKey:'admin',       status:'active',   lastDate:'May 21, 2025', lastTime:'10:30 AM', isYou:true,  color:'#F97316', init:'SK' },
+  { id:1,  name:'Sachin', email:'sachin@thenoviq.co.in', roleKey:'admin',       status:'active',   lastDate:'May 21, 2025', lastTime:'10:30 AM', isYou:true,  color:'#F97316', init:'SK' },
   { id:2,  name:'Ananya Singh',  email:'ananya.singh@examprep.com',  roleKey:'editor',      status:'active',   lastDate:'May 21, 2025', lastTime:'09:15 AM', isYou:false, color:'#10B981', init:'AS' },
   { id:3,  name:'Rohit Verma',   email:'rohit.verma@examprep.com',   roleKey:'reviewer',    status:'active',   lastDate:'May 21, 2025', lastTime:'08:45 AM', isYou:false, color:'#3B82F6', init:'RV' },
   { id:4,  name:'Priya Sharma',  email:'priya.sharma@examprep.com',  roleKey:'author',      status:'active',   lastDate:'May 20, 2025', lastTime:'07:20 PM', isYou:false, color:'#8B5CF6', init:'PS' },
