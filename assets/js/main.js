@@ -204,7 +204,7 @@
       '<div class="dd-profile-header">' +
         '<div class="avatar-placeholder avatar-lg" style="background:#F97316;font-size:16px;">SK</div>' +
         '<div>' +
-          '<div class="dd-profile-name">Saurabh Kumar</div>' +
+          '<div class="dd-profile-name">Sachin M</div>' +
           '<div class="dd-profile-role">Admin · ExamPrep</div>' +
         '</div>' +
       '</div>' +
@@ -238,7 +238,7 @@
           '<button class="btn btn-ghost" style="font-size:12px;margin-top:8px;" onclick="showToast(\'Photo upload coming soon\',\'info\')">Change Photo</button>' +
         '</div>' +
         '<div class="profile-modal-fields">' +
-          '<div class="profile-field"><label>Full Name</label><input type="text" value="Saurabh Kumar" class="ui-input" /></div>' +
+          '<div class="profile-field"><label>Full Name</label><input type="text" value="Sachin M" class="ui-input" /></div>' +
           '<div class="profile-field"><label>Email</label><input type="email" value="saurabh@examprep.in" class="ui-input" /></div>' +
           '<div class="profile-field"><label>Role</label><input type="text" value="Admin" class="ui-input" readonly /></div>' +
           '<div class="profile-field"><label>Organisation</label><input type="text" value="ExamPrep Academy" class="ui-input" /></div>' +
